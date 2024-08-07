@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitung Luas Segitiga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 w-96">
+      <form id="triangleForm">
+        <div class="mb-4">
+          <label for="base" class="block text-gray-700">Alas (cm):</label>
+          <input
+            type="number"
+            id="base"
+            name="base"
+            class="mt-1 p-2 w-full border rounded-lg"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="height" class="block text-gray-700">Tinggi (cm):</label>
+          <input
+            type="number"
+            id="height"
+            name="height"
+            class="mt-1 p-2 w-full border rounded-lg"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <button
+            type="button"
+            onclick="calculateArea()"
+            class="w-full bg-blue-500 text-white p-2 rounded-lg"
+          >
+            Hitung
+          </button>
+        </div>
+        <div class="mt-4">
+          <p id="result" class="text-center text-gray-700 font-bold"></p>
+        </div>
+      </form>
+    </div>
+    <script>
+      function calculateArea() {
+        const base = document.getElementById("base").value;
+        const height = document.getElementById("height").value;
+        const area = (base * height) / 2;
+        document.getElementById(
+          "result"
+        ).textContent = `Luas Segitiga: ${area} cm²`;
+      }
+    </script>
+  </body>
+</html>
