@@ -18,5 +18,12 @@ class Record :
         self.records.pop()
 
     def printRecord(self):
-        print(self.records)
+        for student in self.records:
+            print("===========================")
+            print(getattr(student, 'nama'))
+            print(getattr(student, 'npm'))
+            print(getattr(student, 'tempat_lahir'))
+            print(getattr(student, 'tanggal_lahir'))
+            print(getattr(student, 'prodi'))
+            print("===========================")
 
